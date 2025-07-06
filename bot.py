@@ -51,13 +51,10 @@ def get_text_from_screen():
     # Process image
     processed_img = correct_image(screenshot)
 
-    # OCR without saving to disk
-    buffer = io.BytesIO()
-    processed_img.save(buffer, format="PNG")
-    buffer.seek(0)
-    image = Image.open(buffer)
+    # Saving image
+    processed_img.save('screenshot.png')
 
-    text = pytesseract.image_to_string(image, lang='eng').replace('\n', ' ')
+    text = pytesseract.image_to_string('screenshot.png', lang='eng').replace('\n', ' ')
     return text
 
 def type_text(text_array):
