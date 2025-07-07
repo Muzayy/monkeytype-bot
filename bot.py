@@ -17,7 +17,7 @@ bot_thread = None
 
 # Delay between loops (adjust if needed)
 screenshot_delay = 0.02
-typing_delay = 0.2
+typing_delay = 0.008
 
 # Colors to filter the image
 text_color = (100, 102, 104)
