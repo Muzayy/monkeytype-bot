@@ -17,7 +17,7 @@ bot_thread = None
 
 # Delay between loops (adjust if needed)
 screenshot_delay = 0.02
-typing_delay = 0.008
+typing_delay = 0.2
 
 # Colors to filter the image
 text_color = (100, 102, 104)
@@ -96,7 +96,9 @@ def start_bot():
 
 def stop_bot():
     global running
+    global is_typing
     running = False
+    is_typing = False
     print("🛑 Bot Stopped.")
 
 # Hotkeys
